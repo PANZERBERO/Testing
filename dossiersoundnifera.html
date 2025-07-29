@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dossier de Prensa - Soundnífera</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- CSS Personalizado -->
+    <style>
+        /* Carga de fuentes personalizadas desde GitHub */
+        @font-face {
+            font-family: 'Baketvalley';
+            src: url('https://raw.githubusercontent.com/PANZERBERO/Testing/main/baketvalley_old.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Lobster';
+            src: url('https://raw.githubusercontent.com/PANZERBERO/Testing/main/Lobster%201.4.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* Estilos generales */
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Lobster', cursive;
+            background-color: #000000;
+            background-image: radial-gradient(ellipse at top, #2d1742, #000000);
+            background-size: cover;
+            background-position: center;
+            background-attachment: scroll; 
+        }
+        h2, h3, p, a, footer {
+             font-family: 'Lobster', cursive;
+        }
+        p {
+            text-align: justify;
+        }
+        footer p {
+            text-align: center;
+        }
+        .font-logo {
+            font-family: 'Baketvalley', sans-serif;
+        }
+        
+        /* Efecto de neón SUTIL para el cuerpo del dossier */
+        .neon-text {
+            color: #f0e6ff;
+            text-shadow:
+                0 0 2px #d8b4fe,
+                0 0 5px #c084fc,
+                0 0 10px #a855f7;
+        }
+
+        /* Efecto de neón INTENSO para la portada */
+        .cover-neon-text {
+            color: #fff;
+            text-shadow:
+                0 0 7px #fff,
+                0 0 10px #fff,
+                0 0 21px #fff,
+                0 0 42px #a855f7,
+                0 0 82px #a855f7,
+                0 0 92px #a855f7;
+        }
+
+        /* Estilo para alinear miniaturas de video */
+        .video-thumbnail {
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+        }
+        
+        /* --- INSTRUCCIONES ESPECIALES PARA IMPRESIÓN (PDF) --- */
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact !important; /* Fuerza la impresión de fondos en Chrome/Safari */
+                print-color-adjust: exact !important; /* Estándar para forzar la impresión de fondos */
+                background-image: radial-gradient(ellipse at top, #2d1742, #000000) !important;
+            }
+            
+            section {
+                page-break-inside: avoid !important; /* Regla antigua para evitar cortes */
+                break-inside: avoid !important; /* Regla moderna para evitar cortes */
+                padding-top: 2rem !important; /* Añade espacio superior en cada sección impresa */
+                padding-bottom: 2rem !important; /* Añade espacio inferior en cada sección impresa */
+                margin: 0 !important;
+            }
+            
+            section h2 {
+                margin-top: 0 !important;
+                margin-bottom: 3rem !important; /* Aumenta el espacio debajo de los títulos */
+            }
+
+            #cover {
+                min-height: 95vh !important; /* Ajusta la altura de la portada para que quepa bien en una página */
+            }
+
+            main {
+                max-width: 100% !important;
+                padding: 0 1.5rem !important; /* Añade un padding horizontal para que el contenido no pegue al borde */
+            }
+        }
+    </style>
+</head>
+<body class="text-gray-200">
+
+    <!-- Sección de Portada -->
+    <section id="cover" class="min-h-screen flex items-center justify-center text-white overflow-hidden">
+        <div class="text-center">
+            <h1 class="font-logo cover-neon-text text-7xl sm:text-8xl md:text-9xl tracking-wider mb-4">Soundnífera</h1>
+            <h2 class="text-3xl md:text-4xl tracking-widest text-gray-300">Dossier Musical</h2>
+        </div>
+    </section>
+
+    <!-- Contenedor Principal del Contenido -->
+    <main class="container mx-auto max-w-6xl p-4 sm:p-8">
+
+        <!-- Sección de Historia -->
+        <section id="historia" class="py-12 md:py-16">
+            <h2 class="text-6xl sm:text-7xl font-bold text-center neon-text mt-8 mb-12">Historia y Formación</h2>
+            <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-center">
+                <div class="md:w-1/2">
+                    <img src="https://raw.githubusercontent.com/PANZERBERO/Testing/main/Imagen%201.webp" alt="Génesis y Cristóbal en el estudio" class="rounded-lg shadow-2xl w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/111111/a855f7?text=Soundn%C3%ADfera+en+el+estudio';">
+                </div>
+                <div class="md:w-1/2 p-6 sm:p-8 rounded-xl">
+                    <p class="text-xl lg:text-2xl leading-relaxed mb-4">
+                        Génesis (vocalista) y Cristóbal (Productor/Dj) iniciaron una colaboración el año 2023 en Santiago, basada en una compatibilidad musical y fiato artístico.
+                    </p>
+                    <p class="text-xl lg:text-2xl leading-relaxed">
+                        Todo comenzó cuando Cristóbal, productor, técnico en sonido y multiinstrumentista, publicó en una página de reclutamiento de músicos que buscaba vocalista para un proyecto Trip Hop, él ya contaba con un Demo de 7 pistas mezcladas. Génesis, abogada de profesión pero con el corazón en la música, siempre quiso cantar y componer sus propias canciones, vió el aviso y escribió para participar. Luego de que varias postulantes se presentaron al casting, Génesis era la indicada.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Género y Estilo -->
+        <section id="genero-estilo" class="py-12 md:py-16">
+            <h2 class="text-6xl sm:text-7xl font-bold text-center neon-text mt-8 mb-12">Género y Estilo Musical: Trip Hop</h2>
+            <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-center">
+                <div class="md:w-1/2 p-6 sm:p-8 rounded-xl space-y-6">
+                    <p class="text-xl lg:text-2xl leading-relaxed">
+                        El Trip Hop, es un estilo bastante atípico en la escena local proveniente de Bristol-Inglaterra en los años 90s, es por esto que nuestras líricas respetan la lengua nativa pero también nos dimos la libertad de ir jugando con el lenguaje e intercalar idiomas para darle nuestro sello y no olvidar nuestras raíces, por lo que nuestras canciones están escritas en inglés-español (spanglish), y algunas incluso en francés. Es un género poco visto y desarrollado en nuestro país pero melódico, sensual y agradable al oído, sobre todo para melómanos y quienes disfrutan de gustos más sofisticados.
+                    </p>
+                    <p class="text-xl lg:text-2xl leading-relaxed">
+                        Este estilo fusiona elementos de la electrónica y los sintetizadores, con influencias del Soul, R&B, Hip Hop, Jazz y Rock. Sus principales exponentes son Portishead, Massive Attack y Tricky, entre otros. En la escena de música alternativa y electrónica internacional es muy popular.
+                    </p>
+                     <p class="text-xl lg:text-2xl leading-relaxed">
+                        Gustavo Cerati es un gran referente latinoamericano que experimentó con el Trip Hop, al aprender a utilizar samples y crear sonidos atmosféricos. Un ejemplo de esto, fue su gran obra discográfica “Bocanada”.
+                    </p>
+                </div>
+                <div class="md:w-1/2 space-y-4">
+                    <img src="https://raw.githubusercontent.com/PANZERBERO/Testing/main/Im%C3%A1genes/generoestilo/sotano%20editada.jpg" alt="Soundnífera en vivo" class="rounded-lg shadow-2xl w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/111111/a855f7?text=La+Banda';">
+                    <div class="grid grid-cols-2 gap-4">
+                         <img src="https://raw.githubusercontent.com/PANZERBERO/Testing/main/Im%C3%A1genes/generoestilo/Genemixing.jpg" alt="Génesis cantando" class="rounded-lg shadow-2xl w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/111111/a855f7?text=Cantante';">
+                         <img src="https://raw.githubusercontent.com/PANZERBERO/Testing/main/Im%C3%A1genes/generoestilo/Cristobalscratch.jpg" alt="Cristóbal haciendo scratch" class="rounded-lg shadow-2xl w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/111111/a855f7?text=DJ';">
+                    </div>
+                    <div class="flex justify-center pt-4">
+                         <img src="https://i1.sndcdn.com/artworks-Qh8wRzyrZHznuhbp-zgHCjg-t1080x1080.jpg" alt="Gustavo Cerati, referente del Trip Hop en Latinoamérica" class="w-1/3 rounded-full shadow-2xl border-4 border-purple-500/50" onerror="this.onerror=null;this.src='https://placehold.co/400x400/111111/a855f7?text=Cerati';">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Concepto -->
+        <section id="concepto" class="py-12 md:py-16">
+            <h2 class="text-6xl sm:text-7xl font-bold text-center neon-text mt-8 mb-12 leading-tight">
+                Concepto de la Banda:<br>
+                <span class="text-5xl sm:text-6xl">Sound (Sonido) Nífera (Somnífero)</span><br>
+                <span class="text-4xl sm:text-5xl font-normal text-purple-300">“Sonido que te Evoca un Trance Hipnótico”</span>
+            </h2>
+            <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-center">
+                <div class="md:w-1/2 space-y-8">
+                    <img src="https://raw.githubusercontent.com/PANZERBERO/Testing/main/Im%C3%A1genes/Concepto/Concepto.jpg" alt="Concepto visual de Soundnífera" class="rounded-lg shadow-2xl w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/111111/a855f7?text=Concepto';">
+                    <!-- Enlace al video de YouTube -->
+                    <a href="https://www.youtube.com/watch?v=XhU0QpPn5z0" target="_blank" class="block relative rounded-lg overflow-hidden shadow-2xl group">
+                        <img src="https://img.youtube.com/vi/XhU0QpPn5z0/maxresdefault.jpg" alt="Videoclip de Soundnífera en El Sótano" class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-75 group-hover:opacity-100 transition-opacity duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-20 h-20 text-white drop-shadow-lg" viewBox="0 0 24 24" fill="currentColor"><path d="M10 16.5l6-4.5-6-4.5v9zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg>
+                        </div>
+                    </a>
+                </div>
+                <div class="md:w-1/2 p-6 sm:p-8 rounded-xl space-y-6">
+                    <p class="text-xl lg:text-2xl leading-relaxed">
+                        Nuestras melodías mezclan sonidos de beats y ritmos lentos denominados Downtempo, acompañados de Scratchs, efectos de tornamesa y una marcada línea de bajo aportando los graves, todo ello junto a una voz melódica y a ratos susurrante, con rimas y arreglos de efectos vocales. Calando en el subconsciente del oyente, tal cual lo haría un hipnotista. Todo esto, construye un paisaje sonoro melancólico y de ensoñación que facilita un estado de inmersión y catarsis.
+                    </p>
+                    <p class="text-xl lg:text-2xl leading-relaxed">
+                        Nuestras Líricas tratan temáticas como el desamor, la fragilidad de los vínculos, el exceso de tecnologías y materialismo, la falta de consciencia con el entorno, creando una sociedad cada vez más individualista y superflua. Lo que está provocando una creciente sensación de profunda soledad e incomprensión en las personas.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Lanzamiento -->
+        <section id="lanzamiento" class="py-12 md:py-16 text-center">
+            <h2 class="text-5xl md:text-6xl font-bold mt-8 mb-4 neon-text" style="color: #ffb8b8;">Lanzamiento de Nuestro Primer Single</h2>
+            <h3 class="text-6xl sm:text-7xl font-bold mb-12 neon-text">"Irreversible"</h3>
+            <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-center justify-center">
+                <div class="md:w-1/3 text-left space-y-8">
+                    <div>
+                        <p class="text-3xl lg:text-4xl">Noviembre</p>
+                        <p class="text-5xl lg:text-6xl font-bold">2023</p>
+                    </div>
+                    <div class="space-y-4">
+                        <a href="https://open.spotify.com/intl-es/track/7MwKGiaSW6SiWipo6NZz8F?si=f23B6QSqRca_SAeQsOomOA&nd=1&dlsi=9811ce7411844629" target="_blank" class="flex items-center justify-center gap-4 bg-green-500/80 text-white p-4 rounded-lg text-2xl hover:bg-green-500 transition-all duration-300">
+                            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 fill-current"><title>Spotify</title><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.923 17.483c-.22.359-.69.485-.962.266-2.433-1.489-5.48-1.83-9.133-1.002-.37.083-.733-.155-.816-.525-.083-.37.155-.733.525-.816a10.61 10.61 0 0 1 4.048-.962c3.033-.663 5.77.155 7.923 1.338.3.18.37.608.115.9zm1.2-2.708c-.275.44-.84.59-1.28.316-2.7-1.72-6.283-2.24-10.2-1.22-.45.115-.9-.18-1.018-.63-.115-.45.18-.9.63-1.017a12.593 12.593 0 0 1 4.515-1.018c3.267-.816 6.35.058 8.857 1.666.44.275.59.84.316 1.28zm.13-3.138C15.259 9.03 9.923 8.78 5.842 9.94c-.525.155-1.08-.18-1.23-.704-.155-.525.18-1.08.704-1.23C9.684 6.64 15.68 6.92 20.34 9.63c.525.3.704.93.402 1.453-.3.525-.93.704-1.455.402z"/></svg>
+                            <span>Spotify</span>
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=cJ6lE12rh8Y&list=RDcJ6lE12rh8Y&start_radio=1&ab_channel=Soundn%C3%ADfera-Topic" target="_blank" class="flex items-center justify-center gap-4 bg-red-600/80 text-white p-4 rounded-lg text-2xl hover:bg-red-600 transition-all duration-300">
+                            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 fill-current"><title>YouTube</title><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                            <span>YouTube</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-2/3">
+                    <img src="https://raw.githubusercontent.com/PANZERBERO/Testing/main/Im%C3%A1genes/Irreversible/Irreversible.jpg" alt="Carátula del single Irreversible" class="rounded-lg shadow-2xl w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/800x800/111111/ffb8b8?text=Irreversible';">
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Primer Show -->
+        <section id="primer-show" class="py-12 md:py-16">
+            <div class="text-center">
+                <h2 class="text-6xl sm:text-7xl font-bold mt-8 mb-4 neon-text">Primer Show en Vivo</h2>
+                <p class="text-3xl lg:text-4xl mb-1">Estudio Mirador</p>
+                <p class="text-3xl lg:text-4xl mb-1">La Florida</p>
+                <p class="text-3xl lg:text-4xl mb-12">Diciembre-2023</p>
+            </div>
+            <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-center">
+                <div class="md:w-1/2">
+                    <img src="https://raw.githubusercontent.com/PANZERBERO/Testing/main/Im%C3%A1genes/Primershow/Primer%20show%20flyer.jpg" alt="Flyer del evento Nación Alternativa" class="rounded-lg shadow-2xl w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x800/111111/a855f7?text=Flyer';">
+                </div>
+                <div class="md:w-1/2 space-y-4">
+                    <div class="p-6 sm:p-8 rounded-xl">
+                        <p class="text-xl lg:text-2xl leading-relaxed">
+                            Evento autogestionado por varias bandas locales de diversos estilos musicales, tales como Hard Rock, Funk, Rock Alternativo, Grunge, Space Rock y nosotros acompañando en el Trip Hop. Tuvimos una excelente recepción tanto de la audiencia como de los músicos que se presentes, disfrutaron mucho nuestra propuesta e incluso nos felicitaron. Necesario destacar, la diversidad del público asistente y su conocimiento musical, razón que nos impulsó y nos motivó aún más.
+                        </p>
+                    </div>
+                    <img src="https://raw.githubusercontent.com/PANZERBERO/Testing/main/Im%C3%A1genes/Primershow/Primer%20show%20banda.jpg" alt="Soundnífera en su primer show en vivo" class="rounded-lg shadow-2xl w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/111111/a855f7?text=Banda+en+vivo';">
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Javiera -->
+        <section id="javi" class="py-12 md:py-16">
+            <h2 class="text-6xl sm:text-7xl font-bold text-center neon-text mt-8 mb-12">Integración de Javiera Ortiz en el Bajo</h2>
+            <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-center">
+                <div class="md:w-2/5 p-6 sm:p-8 rounded-xl">
+                    <p class="text-xl lg:text-2xl leading-relaxed mb-4">
+                       Teníamos complicaciones con nuestro anterior bajista ya que se encontraba cursando su licenciatura en Música y no contaba con el tiempo suficiente para dedicar al proyecto.
+                    </p>
+                    <p class="text-xl lg:text-2xl leading-relaxed">
+                       Es por esto, que en nuestra búsqueda incorporamos a la banda a Javiera Ortiz, actual prevencionista de riesgos pero que en sus ratos libres tocaba el bajo y siempre soñó con integrar un proyecto musical, razón por la cual ella llegó para quedarse. Y nosotros adoramos tener la impronta femenina en nuestra agrupación.
+                    </p>
+                </div>
+                <div class="md:w-3/5">
+                    <img src="https://raw.githubusercontent.com/PANZERBERO/Testing/main/Im%C3%A1genes/Javi/Javi3.jpg" alt="Javiera, bajista de Soundnífera" class="rounded-lg shadow-2xl w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/111111/a855f7?text=Javiera';">
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Videos -->
+        <section id="videos" class="py-12 md:py-16">
+            <h2 class="text-6xl sm:text-7xl font-bold text-center neon-text mt-8 mb-12">Videos Destacados</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Video 1 -->
+                <a href="https://youtu.be/L-g7C7kSoHQ" target="_blank" class="block relative rounded-lg overflow-hidden shadow-2xl group">
+                    <img src="https://raw.githubusercontent.com/PANZERBERO/Testing/main/Im%C3%A1genes/videos/Portada1.JPG" alt="Video 1" class="video-thumbnail w-full h-auto transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-75 group-hover:opacity-100 transition-opacity duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-20 h-20 text-white drop-shadow-lg" viewBox="0 0 24 24" fill="currentColor"><path d="M10 16.5l6-4.5-6-4.5v9zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg>
+                    </div>
+                </a>
+                <!-- Video 2 -->
+                <a href="https://youtu.be/sxtooH4vkjg" target="_blank" class="block relative rounded-lg overflow-hidden shadow-2xl group">
+                    <img src="https://raw.githubusercontent.com/PANZERBERO/Testing/main/Im%C3%A1genes/videos/Portada2.jpg" alt="Video 2" class="video-thumbnail w-full h-auto transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-75 group-hover:opacity-100 transition-opacity duration-300">
+                         <svg xmlns="http://www.w3.org/2000/svg" class="w-20 h-20 text-white drop-shadow-lg" viewBox="0 0 24 24" fill="currentColor"><path d="M10 16.5l6-4.5-6-4.5v9zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Sección de Otras Presentaciones -->
+        <section id="otras-presentaciones" class="py-12 md:py-16">
+            <h2 class="text-5xl md:text-6xl font-bold text-center neon-text mt-8 mb-12 leading-tight">Otras Presentaciones Autogestionadas<br><span class="text-3xl md:text-4xl">Bar El Sótano & Irarrázabar, 2024</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Video 1 -->
+                <a href="https://www.youtube.com/watch?v=CjVotoHsqAI" target="_blank" class="block relative rounded-lg overflow-hidden shadow-2xl group">
+                    <img src="https://raw.githubusercontent.com/PANZERBERO/Testing/main/otraspresentaciones/Otraspresentaciones1.jpg" alt="Presentación 1" class="video-thumbnail w-full h-auto transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-75 group-hover:opacity-100 transition-opacity duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-20 h-20 text-white drop-shadow-lg" viewBox="0 0 24 24" fill="currentColor"><path d="M10 16.5l6-4.5-6-4.5v9zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg>
+                    </div>
+                </a>
+                <!-- Video 2 -->
+                <a href="https://youtube.com/shorts/rlVJp7YJaoI" target="_blank" class="block relative rounded-lg overflow-hidden shadow-2xl group">
+                    <img src="https://raw.githubusercontent.com/PANZERBERO/Testing/main/otraspresentaciones/editada%20sotano.jpg" alt="Presentación 2" class="video-thumbnail w-full h-auto transition-transform duration-300 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-75 group-hover:opacity-100 transition-opacity duration-300">
+                         <svg xmlns="http://www.w3.org/2000/svg" class="w-20 h-20 text-white drop-shadow-lg" viewBox="0 0 24 24" fill="currentColor"><path d="M10 16.5l6-4.5-6-4.5v9zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Sección de Registro SCD -->
+        <section id="scd-registro" class="py-12 md:py-16">
+             <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-center">
+                <!-- Columna de Texto -->
+                <div class="md:w-1/2 text-center md:text-left p-6">
+                    <h2 class="text-6xl sm:text-7xl font-bold mt-8 mb-4 neon-text">Registro en SCD</h2>
+                    <p class="text-4xl lg:text-5xl leading-tight mb-4">De Nuestro Single "Irreversible"</p>
+                    <p class="text-3xl lg:text-4xl mb-8">Diciembre 2024</p>
+                    <p class="text-3xl lg:text-4xl font-bold text-purple-300">En Calidad de Autores y Compositores</p>
+                </div>
+                <!-- Columna de Imágenes -->
+                <div class="md:w-1/2 flex flex-col items-center gap-8">
+                     <img src="https://raw.githubusercontent.com/PANZERBERO/Testing/main/Im%C3%A1genes/Irreversible/Irreversible.jpg" alt="Carátula del single Irreversible" class="w-2/3 rounded-lg shadow-2xl" onerror="this.onerror=null;this.src='https://placehold.co/400x400/111111/ffb8b8?text=Irreversible';">
+                     <img src="https://raw.githubusercontent.com/PANZERBERO/Testing/main/Im%C3%A1genes/SCD/Scd.png" alt="Logo SCD" class="w-1/2 rounded-lg shadow-2xl" onerror="this.onerror=null;this.src='https://placehold.co/600x200/111111/a855f7?text=SCD';">
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sección Bar de René -->
+        <section id="bar-rene" class="py-12 md:py-16">
+             <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-center">
+                <!-- Columna de Texto -->
+                <div class="md:w-1/2 text-center md:text-left p-6">
+                    <h2 class="text-6xl sm:text-7xl font-bold mt-8 mb-8 neon-text leading-tight">Presentación en el Aniversario del Bar de René</h2>
+                    <p class="text-3xl lg:text-4xl font-bold text-purple-300">Gracias a las votaciones del público (147 votos) fuimos seleccionados para tocar en el mítico bar el pasado 29 de Mayo del 2025.</p>
+                </div>
+                <!-- Columna de Imágenes -->
+                <div class="md:w-1/2 flex justify-center">
+                     <img src="https://raw.githubusercontent.com/PANZERBERO/Testing/main/Im%C3%A1genes/Barderene/Flyer%20Rene.jpg" alt="Flyer de la presentación en el Bar de René" class="w-full md:w-3/4 rounded-lg shadow-2xl" onerror="this.onerror=null;this.src='https://placehold.co/600x800/111111/a855f7?text=Flyer+Bar+de+Ren%C3%A9';">
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Fotos Show Bar de René -->
+        <section id="show-rene-fotos" class="py-12 md:py-16 text-center">
+            <div class="max-w-4xl mx-auto">
+                <a href="https://youtube.com/shorts/LwYEP5CQACs?feature=share" target="_blank" class="block relative rounded-lg overflow-hidden shadow-2xl group">
+                    <img src="https://raw.githubusercontent.com/PANZERBERO/Testing/main/Im%C3%A1genes/Barderene/Show%20Rene.jpg" alt="Soundnífera en vivo en Bar de René" class="rounded-lg shadow-2xl w-full h-auto object-cover mb-8 transition-transform duration-300 group-hover:scale-105" onerror="this.onerror=null;this.src='https://placehold.co/1200x800/111111/a855f7?text=Show+en+Bar+de+Ren%C3%A9';">
+                    <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-75 group-hover:opacity-100 transition-opacity duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-20 h-20 text-white drop-shadow-lg" viewBox="0 0 24 24" fill="currentColor"><path d="M10 16.5l6-4.5-6-4.5v9zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg>
+                    </div>
+                </a>
+                <h2 class="text-4xl lg:text-5xl font-bold neon-text mt-8">Registro del show en Bar de René ante 71 personas aprox.</h2>
+            </div>
+        </section>
+
+        <!-- Sección Rider Técnico -->
+        <section id="rider-tecnico" class="py-12 md:py-16 text-center">
+            <h2 class="text-6xl sm:text-7xl font-bold text-center neon-text mt-8 mb-12">Rider: Soundnífera</h2>
+            <div class="max-w-4xl mx-auto bg-black/20 p-8 rounded-lg">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-2xl table-auto">
+                        <thead class="bg-purple-500/20">
+                            <tr>
+                                <th class="p-4">Canales</th>
+                                <th class="p-4">Instrumento</th>
+                                <th class="p-4">Micrófonos</th>
+                                <th class="p-4">Inserts</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-purple-500/20">
+                            <tr>
+                                <td class="p-4">1</td>
+                                <td class="p-4">Mic. Voz Principal</td>
+                                <td class="p-4">Shure Beta 58</td>
+                                <td class="p-4">Reverb+Delay</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4">1</td>
+                                <td class="p-4">Bajo Line</td>
+                                <td class="p-4">Caja Directa</td>
+                                <td class="p-4">Compresor</td>
+                            </tr>
+                             <tr>
+                                <td class="p-4">1</td>
+                                <td class="p-4">Tornamesa</td>
+                                <td class="p-4">Caja Activa</td>
+                                <td class="p-4">Delay+Reverb</td>
+                            </tr>
+                             <tr>
+                                <td class="p-4">1</td>
+                                <td class="p-4">Mic. DJ</td>
+                                <td class="p-4">Caja Directa</td>
+                                <td class="p-4">Reverb+Phantom Power</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 class="text-5xl font-bold mt-12 mb-8 neon-text">Backline</h3>
+                <ul class="text-2xl space-y-4 text-left list-disc list-inside">
+                    <li>BAJO: 1 Amplificador de bajo (Cabina 8 X 10) de mínimo 200 Watts, de cualquiera de las siguientes marcas: SWR Workman’s Series o Hartke o Carvin o AMPEG.</li>
+                    <li>VOZ: Caja Activa JBL mínimo 200 Watts.</li>
+                    <li>DJ: Caja Activa Laney mínimo 200 Watts.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Sección de Contacto -->
+        <section id="contacto" class="py-12 md:py-16">
+            <h2 class="text-6xl sm:text-7xl font-bold text-center neon-text mt-8 mb-12">Contacto</h2>
+            <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-center">
+                <!-- Columna de Imagen -->
+                <div class="md:w-1/2">
+                    <img src="https://raw.githubusercontent.com/PANZERBERO/Testing/main/Im%C3%A1genes/Cierre/Cierre.jpg" alt="Soundnífera en vivo" class="rounded-lg w-full h-auto object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/111111/a855f7?text=Soundn%C3%ADfera';">
+                </div>
+                <!-- Columna de Contacto -->
+                <div class="md:w-1/2 p-6 sm:p-8 rounded-xl text-center md:text-left space-y-6">
+                    <a href="mailto:Soundnifera@gmail.com" class="flex items-center gap-4 text-2xl lg:text-3xl hover:text-purple-300 transition-colors duration-300">
+                        <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        <span>Soundnifera@gmail.com</span>
+                    </a>
+                     <a href="https://www.youtube.com/@soundnifera" target="_blank" class="flex items-center gap-4 text-2xl lg:text-3xl hover:text-purple-300 transition-colors duration-300">
+                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-purple-400 fill-current"><title>YouTube</title><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        <span>youtube.com/@soundnifera</span>
+                    </a>
+                    <a href="https://instagram.com/soundnifera" target="_blank" class="flex items-center gap-4 text-2xl lg:text-3xl hover:text-purple-300 transition-colors duration-300">
+                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-purple-400 fill-current"><title>Instagram</title><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.784.305-1.48.77-2.126 1.414S.935 3.356.63 4.14C.333 4.905.132 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.26 2.148.558 2.913.306.783.77 1.48 1.414 2.126s1.343.973 2.126 1.414c.766.296 1.636.496 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.26 2.913-.558.783-.306 1.48-.77 2.126-1.414s.973-1.343 1.414-2.126c.296-.765.496-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.26-2.148-.558-2.913-.306-.784-.77-1.48-1.414-2.126S20.644.935 19.86.63c-.765-.297-1.636-.496-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.07 1.17.055 1.805.248 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.056 1.17-.25 1.805-.414 2.227-.217.562-.477.96-.896 1.382-.42.419-.82.679-1.38.896-.423.164-1.057.36-2.227.413-1.266.057-1.646.07-4.85.07s-3.585-.015-4.85-.07c-1.17-.055-1.805-.248-2.227-.415-.562-.217-.96-.477-1.382-.896-.419-.42-.679-.819-.896-1.381-.164-.422-.36-1.057-.413-2.227-.057-1.266-.07-1.646-.07-4.85s.015-3.585.07-4.85c.055-1.17.248-1.805.415-2.227.217-.562.477.96.896-1.382.42-.419.819-.679 1.381-.896.422-.164 1.057-.36 2.227-.413C8.415 2.172 8.796 2.16 12 2.16zm0 5.48c-2.49 0-4.5 2.01-4.5 4.5s2.01 4.5 4.5 4.5 4.5-2.01 4.5-4.5-2.01-4.5-4.5-4.5zm0 7.16c-1.447 0-2.62-1.173-2.62-2.62s1.173-2.62 2.62-2.62 2.62 1.173 2.62 2.62-1.173 2.62-2.62 2.62zm5.338-9.87c-.552 0-1 .448-1 1s.448 1 1 1 1-.448 1-1-.448-1-1-1z"/></svg>
+                        <span>instagram.com/soundnifera</span>
+                    </a>
+                    <a href="https://open.spotify.com/intl-es/track/7MwKGiaSW6SiWipo6NZz8F?si=f23B6QSqRca_SAeQsOomOA&nd=1&dlsi=9811ce7411844629" target="_blank" class="flex items-center gap-4 text-2xl lg:text-3xl hover:text-purple-300 transition-colors duration-300">
+                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-purple-400 fill-current"><title>Spotify</title><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.923 17.483c-.22.359-.69.485-.962.266-2.433-1.489-5.48-1.83-9.133-1.002-.37.083-.733-.155-.816-.525-.083-.37.155-.733.525-.816a10.61 10.61 0 0 1 4.048-.962c3.033-.663 5.77.155 7.923 1.338.3.18.37.608.115.9zm1.2-2.708c-.275.44-.84.59-1.28.316-2.7-1.72-6.283-2.24-10.2-1.22-.45.115-.9-.18-1.018-.63-.115-.45.18-.9.63-1.017a12.593 12.593 0 0 1 4.515-1.018c3.267-.816 6.35.058 8.857 1.666.44.275.59.84.316 1.28zm.13-3.138C15.259 9.03 9.923 8.78 5.842 9.94c-.525.155-1.08-.18-1.23-.704-.155-.525.18-1.08.704-1.23C9.684 6.64 15.68 6.92 20.34 9.63c.525.3.704.93.402 1.453-.3.525-.93.704-1.455.402z"/></svg>
+                        <span>Escucha "Irreversible" en Spotify</span>
+                    </a>
+                    <div class="pt-6 flex items-center gap-4 text-2xl lg:text-3xl">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-green-400" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 4.315 1.731 6.086l-.476 1.745 1.78-1.01z"/></svg>
+                        <div class="flex flex-col md:flex-row md:gap-6">
+                            <a href="https://wa.me/56998099013" target="_blank" class="hover:text-purple-300 transition-colors duration-300">+56998099013</a>
+                            <a href="https://wa.me/56982115830" target="_blank" class="hover:text-purple-300 transition-colors duration-300">+56982115830</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Cierre -->
+        <section id="cierre" class="py-12 md:py-16 flex items-center justify-center">
+            <div class="relative w-full max-w-4xl mx-auto">
+                 <img src="https://raw.githubusercontent.com/PANZERBERO/Testing/main/Im%C3%A1genes/Cierre/CierreDossier.jpg" alt="Soundnífera" class="rounded-lg w-full h-auto object-cover">
+                 <div class="absolute inset-x-0 top-[20%] flex justify-center p-4 md:p-8">
+                     <div class="bg-black/70 px-6 py-3 rounded-lg">
+                        <h1 class="font-logo cover-neon-text text-6xl sm:text-7xl md:text-8xl tracking-wider">Soundnífera</h1>
+                    </div>
+                 </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="text-center py-8 bg-black/80">
+        <p class="text-gray-500">Soundnífera</p>
+    </footer>
+
+    <script>
+        // El script que causaba el error fue removido
+    </script>
+
+</body>
+</html>
